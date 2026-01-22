@@ -1,4 +1,4 @@
-import { Solution } from "./objectives";
+import type { Solution } from "./objectives";
 
 // A dominates B if:
 // - no worse in all objectives
@@ -13,7 +13,8 @@ export function dominates(a: Solution, b: Solution): boolean {
     return betterOrEqual && strictlyBetter;
 }
 
-// compute Pareto front from a set of solutions
+// The Pareto front represents solutions where no objective
+// can be improved without worsening another.
 export function paretoFront(solutions: Solution[]): Solution[] {
     return solutions.filter((s, i) =>
         !solutions.some((other, j) =>

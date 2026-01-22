@@ -1,4 +1,4 @@
-import { evaluate, Solution } from "./objectives";
+import { evaluate, type Solution } from "./objectives";
 
 export function sampleSolutions(
     min: number,
